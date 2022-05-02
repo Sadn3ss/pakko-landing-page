@@ -46,11 +46,20 @@
       }
     }
 
-    ul {
+    .menu {
       display: flex;
       align-items: center;
       list-style: none;
       margin-left: auto;
+      transition: .3s all ease;
+
+      &-active {
+        right: 100%;
+      }
+
+      &-hidden {
+        right: 0;
+      }
 
       .close-btn {
         display: block;

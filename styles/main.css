@@ -56,13 +56,20 @@ body {
 .header .nav .hamburger span:after {
   bottom: -7px;
 }
-.header .nav ul {
+.header .nav .menu {
   display: flex;
   align-items: center;
   list-style: none;
   margin-left: auto;
+  transition: 0.3s all ease;
 }
-.header .nav ul .close-btn {
+.header .nav .menu-active {
+  right: 100%;
+}
+.header .nav .menu-hidden {
+  right: 0;
+}
+.header .nav .menu .close-btn {
   display: block;
   position: absolute;
   cursor: pointer;
@@ -73,13 +80,13 @@ body {
   top: 20px;
   left: 20px;
 }
-.header .nav ul .close-btn:hover {
+.header .nav .menu .close-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.header .nav ul .close-btn-disactive {
+.header .nav .menu .close-btn-disactive {
   display: none;
 }
-.header .nav ul .list-item {
+.header .nav .menu .list-item {
   margin-left: 43px;
 }
 .header .nav__link {
@@ -383,6 +390,10 @@ body {
   background: #5846cc;
 }
 
+.lock {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1240px) {
   .banner {
     padding-bottom: 685px;
@@ -471,11 +482,11 @@ body {
     display: flex;
     align-items: center;
   }
-  .header .nav ul {
+  .header .nav .menu {
     display: none;
     background-color: rgba(16, 10, 48, 0.9);
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     width: 100%;
@@ -483,7 +494,7 @@ body {
     z-index: 1;
     padding-top: 40px;
   }
-  .header .nav ul .list-item {
+  .header .nav .menu .list-item {
     margin: 0;
     padding: 15px 0;
     text-align: center;
