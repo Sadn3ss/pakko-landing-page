@@ -1,0 +1,23 @@
+.container {
+  max-width: 1266px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  margin-left: 29px;
+  vertical-align: middle;
+  text-align: center;
+  color: $white;
+  background: $purple;
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 16px 25px;
+
+  &:hover {
+    background: $dark_purple;
+  }
+}

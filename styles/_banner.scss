@@ -1,0 +1,54 @@
+@import "variables";
+
+.banner {
+  background-color: $dark;
+  text-align: center;
+  color: $white;
+  padding-top: 64px;
+  position: relative;
+  padding-bottom: 757px;
+
+  &__img {
+    position: absolute;
+    left: 3px;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 55px;
+    max-width: 563px;
+    margin: 0 auto;
+    letter-spacing: 0.54px;
+  }
+
+  &__subtitle {
+    padding-top: 29px;
+    letter-spacing: 0.18px;
+  }
+
+  .btn-group {
+    margin-top: 52px;
+
+    &__btn {
+      text-decoration: none;
+      color: $white;
+      display: inline-block;
+      border-radius: 6px;
+      border: 1px solid $gray;
+      padding: 15px 37px;
+
+      &-main {
+        padding: 17px 39px;
+        background-color: $purple;
+        border: none;
+        margin-right: 11px;
+        font-size: 15px;
+
+        &:hover {
+          background-color: $dark_purple;
+        }
+      }
+    }
+  }
+}

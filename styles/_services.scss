@@ -1,0 +1,145 @@
+@import "variables";
+
+.services {
+  padding-top: 210px;
+
+  &__title {
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 48px;
+    max-width: 591px;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 0 86px;
+
+    .card {
+      width: 395px;
+
+      &-header {
+        position: relative;
+        height: 250px;
+        padding: 170px 37px 24px 30px;
+        color: $white;
+        font-size: 24px;
+        border-radius: 8px 8px 0 0;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 30px;
+          top: 158px;
+          background: url('../img/card-title.svg') no-repeat center top / cover;
+          width: 61px;
+          height: 16px;
+        }
+      }
+
+      &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__price {
+          font-size: 48px;
+        }
+
+        &__moice {
+          font-size: 15px;
+        }
+      }
+
+      &-list {
+        list-style-type: none;
+        padding: 24px 24px;
+
+        &__item {
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 20px;
+          font-size: 14px;
+          font-weight: 700;
+          &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 20px;
+            height: 24px;
+            top: calc(50% - 10px);
+            left: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+
+      &-footer {
+        border-radius: 0 0 8px;
+      }
+
+      &-gratuit {
+        .card-header {
+          background: url('../img/card-01.svg') no-repeat center top / cover;
+        }
+
+        .card-footer {
+          background-color: rgba($color: $dark, $alpha: .03);
+        }
+
+        .card-list__item {
+          &::before {
+            background-image: url('../img/check-01.svg');
+          }
+        }
+
+        .card-info__title {
+          padding-top: 13px;
+        }
+      }
+
+      &-basique {
+        .card-header {
+          background: url('../img/card-02.svg') no-repeat center top / cover;
+        }
+
+        .card-info__title {
+          color: #19C787;
+        }
+
+        .card-footer {
+          background-color: rgba($color: #19C787, $alpha: .05);
+        }
+
+        .card-list__item {
+          &::before {
+            background-image: url('../img/check-02.svg');
+          }
+        }
+      }
+
+      &-pro {
+        .card-header {
+          background: url('../img/card-03.svg') no-repeat center top / cover;
+        }
+
+        .card-info__title {
+          color: #FF9F1C;
+        }
+
+        .card-footer {
+          background-color: rgba($color: #FCB934, $alpha: .05);
+        }
+
+        .card-list__item {
+          &::before {
+            background-image: url('../img/check-03.svg');
+          }
+        }
+      }
+    }
+  }
+}
