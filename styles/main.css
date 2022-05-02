@@ -56,21 +56,25 @@ body {
 .header .nav .hamburger span:after {
   bottom: -7px;
 }
-.header .nav .menu {
+.header .nav .menu-fullscreen {
   display: flex;
-  align-items: center;
-  list-style: none;
-  margin-left: auto;
-  transition: 0.3s all ease;
-}
-.header .nav .menu-active {
-  right: 100%;
-}
-.header .nav .menu-hidden {
+  flex-direction: column;
+  background-color: rgba(16, 10, 48, 0.9);
+  position: fixed;
   right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 40px;
 }
-.header .nav .menu .close-btn {
-  display: block;
+.header .nav .menu-fullscreen .list-item {
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+.header .nav .menu-fullscreen .close-btn {
+  display: none;
   position: absolute;
   cursor: pointer;
   color: #fff;
@@ -80,14 +84,20 @@ body {
   top: 20px;
   left: 20px;
 }
-.header .nav .menu .close-btn:hover {
+.header .nav .menu-fullscreen .close-btn:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.header .nav .menu .close-btn-disactive {
-  display: none;
+.header .nav .menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
 }
 .header .nav .menu .list-item {
   margin-left: 43px;
+}
+.header .nav .menu .close-btn {
+  display: none;
 }
 .header .nav__link {
   text-decoration: none;
@@ -484,20 +494,6 @@ body {
   }
   .header .nav .menu {
     display: none;
-    background-color: rgba(16, 10, 48, 0.9);
-    flex-direction: column;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding-top: 40px;
-  }
-  .header .nav .menu .list-item {
-    margin: 0;
-    padding: 15px 0;
-    text-align: center;
   }
   .header .nav__link {
     color: #fff;
