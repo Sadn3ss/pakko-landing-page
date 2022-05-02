@@ -12,20 +12,22 @@
     <div class="container">
         <nav class="nav">
             <a href="#" class="logo"><img src="./img/logo.svg" alt="Logo"></a>
-            <ul>
-                <li>
+            <div class="hamburger" id="hamburger" onclick="openMenu()">
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li class="close-btn close-btn-disactive" id="closeBtn" onclick="closeMenu()">X</li>
+                <li class="list-item">
                     <a href="#" class="nav__link">Tarifs</a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a href="#" class="nav__link">App iOS</a>
                 </li>
-                <li>
+                <li class="list-item">
                     <a href="#" class="nav__link">Me connecter</a>
                 </li>
-                <li>
-                    <a href="#" class="btn">S'inscrire</a>
-                </li>
             </ul>
+            <a href="#" class="btn">S'inscrire</a>
         </nav>
     </div>
 </div>
@@ -198,5 +200,6 @@
         </div>
     </div>
 </div>
+<script src="main.js"></script>
 </body>
 </html>

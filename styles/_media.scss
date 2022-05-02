@@ -117,3 +117,90 @@
     }
   }
 }
+
+@media screen and (max-width: 769px) {
+  .header {
+    .nav {
+      .hamburger {
+        display: flex;
+        align-items: center;
+      }
+
+      ul {
+        display: none;
+        background-color: rgba($dark, .9);
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        padding-top: 40px;
+
+        .list-item {
+          margin: 0;
+          padding: 15px 0;
+          text-align: center;
+        }
+      }
+
+      &__link {
+        color: $white;
+      }
+    }
+  }
+
+  .banner {
+    &__title {
+      font-size: 45px;
+    }
+  }
+
+  .footer {
+    &__wrap {
+      flex-direction: column;
+    }
+
+    &__block:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .banner {
+    .btn-group {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &__btn {
+        padding: 17px 39px;
+        width: 100%;
+
+        &-main {
+          margin: 0 0 10px;
+        }
+      }
+    }
+  }
+
+  .services {
+    &__title {
+      font-size: 38px;
+    }
+
+    .cards {
+      .card {
+        width: 100%;
+      }
+    }
+  }
+
+  .comments {
+    &__title {
+      font-size: 38px;
+    }
+  }
+}
